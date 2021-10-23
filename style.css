@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Kumbh+Sans&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      font-family: Barlow Semi Condensed;
+}
+
+body {
+      background-color: hsl(210, 46%, 95%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+}
+img {
+      border-radius: 50%;
+      border: 2px solid white;
+}
+main {
+      margin: 0 auto;
+      
+      max-width: 1440px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 400px 400px;
+      grid-gap: 30px;
+      grid-template-areas: 
+      "um  um  dois  cinco"
+      "tres quatro quatro cinco";       
+}
+main p {
+      color: hsl(0, 0%, 56%);
+}
+.sessao {
+      box-shadow: 10px 10px 10px hsl(0, 0%, 81%);
+      border-radius: 20px;
+      color: hsl(0, 0%, 100%);
+      
+}
+span {
+      color: hsla(210, 41%, 71%, 0.521);
+}
+.info_usuario {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+}
+.nomeUsuario {
+      padding: 10px;
+      margin: 10px;
+}
+.texto {
+      margin: 0 20px 20px;
+}
+.texto h2 {
+      margin-bottom: 30px;
+}
+.texto p{
+      font-size: 18px;
+      line-height: 1.5;
+}
+.um {
+      grid-area: um;
+      background-color: hsl(263, 55%, 52%);
+      background-image: url(images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position: right 100px top ;
+}
+.dois {
+      grid-area: dois;
+      background-color: hsl(217, 19%, 35%);
+}
+
+.tres {
+      grid-area: tres;
+      background-color: hsl(0, 0%, 100%);
+      color: black;
+}
+.quatro {
+      grid-area: quatro;
+      background-color: hsl(219, 29%, 14%)
+}
+.cinco {
+      grid-area: cinco;
+      background-color:  hsl(0, 0%, 100%);
+      color: black;
+}
+
+/*resposivo*/
+@media(max-width: 1380px ) {
+      body {
+            font-size: 14px;
+      }
+      main {
+            grid-gap: 5px;
+      }
+}
+@media(max-width: 1200px) {
+      main {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "um   dois "
+            "tres quatro"
+            "cinco cinco";
+            grid-gap: 10px;
+      }
+      body {
+            font-size: 12px;
+            margin: 50px;            
+            display: block;
+      }
+      .info_usuario {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+      }
+      .texto {
+            margin: 5px;
+      }
+}
+@media(max-width: 860px) {
+      main {
+            grid-template-columns: 1fr;            
+            grid-template-areas: 
+            "um  " 
+            "dois "
+            "tres "
+            "quatro"
+            "cinco ";
+            grid-gap: 20px;
+            grid-template-rows: max-content;           
+      }
+      .sessao {
+            padding: 10px;
+            margin: 20px;
+      }    
+}
